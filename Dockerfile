@@ -10,8 +10,8 @@ RUN npm install
 
 COPY ./ ./
 
+EXPOSE 8080
+
 CMD ["npm","start"]
 
-FROM nginx
-EXPOSE 80
-COPY --from=builder /app/index.js /usr/share/nginx/html
+
