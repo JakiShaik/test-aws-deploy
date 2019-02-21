@@ -6,10 +6,9 @@ sudo: required
 services:
   - docker
 
-before_install:
-  - docker build -t jockerd/test-aws .
-script:
-  - docker run jockerd/test-aws npm test
+after_deploy:
+  - echo "done deploying"
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"

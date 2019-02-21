@@ -7,6 +7,6 @@
     },
     "scripts": {
         "start": "node index.js",
-        "test": "mocha"
+        "test": "echo no tests"
     }
 }
