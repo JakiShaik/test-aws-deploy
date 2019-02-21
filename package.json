@@ -1,12 +1,11 @@
 {
-    "dependencies": {
-        "express": "*",
-        "redis": "2.8.0",
-        "chai": "^4.2.0",
-        "mocha": "^5.2.0"
-    },
-    "scripts": {
-        "start": "node index.js",
-        "test": "echo no tests"
-    }
+    "main": "app.js",
+  "scripts": {
+    "test": "echo no tests",
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.15.4",
+    "morgan": "^1.8.2"
+  }
 }
