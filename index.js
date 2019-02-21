@@ -1,21 +1,17 @@
-const express = require('express');
-const redis = require('redis');
-const process = require('process');
+var express     = require('express');
+var morgan      = require('morgan');
 
-const app = express();
-const client = redis.createClient({
-    host:'redis-server',
-    port:6379
-});
-client.set('visits',0)
+var app = express();
+var server = require('http').Server(app);
+port = process.env.PORT || 8080;
 
-app.get('/',(req,res) => {
-    client.get('visits',(err,visits) => {
-        res.send('Number of visits is '+visits);
-        client.set('visits',parseInt(visits)+1);
-    });
+// Catch all other routes and return the index file
+app.get('/', (req, res) => {
+  res.send("hello world!!");
 });
 
-app.listen(8081,() => {
-    console.log('Listening on port 8081');
-});
+// use morgan to log requests to the console
+app.use(morgan('dev')); 
+
+server.listen(port);
+console.log('App running at http://localhost:' + port);
