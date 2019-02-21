@@ -3,6 +3,6 @@ services:
   - docker
 
 before_install:
-  - docker build -t jockerd/test-aws Dockerfile .
+  - docker build -t jockerd/test-aws -f Dockerfile .
 script:
   - docker run jockerd/test-aws npm test
