@@ -1,9 +1,12 @@
 {
-    "dependencies":{
+    "dependencies": {
         "express": "*",
-        "redis": "2.8.0"
+        "redis": "2.8.0",
+        "chai": "^4.2.0",
+        "mocha": "^5.2.0"
     },
-    "scripts":{
-        "start": "node index.js"
+    "scripts": {
+        "start": "node index.js",
+        "test": "mocha"
     }
 }
