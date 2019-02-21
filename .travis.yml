@@ -15,7 +15,7 @@ deploy:
   app: "test-aws"
   env: "TestAws-env"
   bucket_name: "elasticbeanstalk-us-east-2-320808986062"
-  bucket_path: "docker-multi"
+  bucket_path: "test-aws"
   on:
     branch: master
   access_key_id: $AWS_ACCESS_KEY
